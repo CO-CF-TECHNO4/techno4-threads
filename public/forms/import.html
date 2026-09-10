@@ -1,0 +1,24 @@
+<ui-component name="form" path="*form" config="if:CLASS;icon:ti ti-file-import;title:@(Import);autofocus:true;reload:?/reload;scrollbar:1;submit:?/submit;width:700" class="hidden" plugin="CLASS">
+	<div class="padding">
+		<ui-component name="input" path="?.data" config="required:1;type:multiline;monospace:1;height:300;placeholder:@(Paste data)" default="''">@(FlowStream JSON)</ui-component>
+	</div>
+	<nav>
+		<ui-component name="validate" path="?">
+			<button name="submit" disabled><i class="ti ti-check-circle"></i>@(SUBMIT)</button>
+			<button name="cancel">@(Cancel)</button>
+		</ui-component>
+	</nav>
+</ui-component>
+
+<script>
+
+	PLUGIN(function(exports) {
+
+		exports.submit = function(hide) {
+			var model = exports.model;
+			model.callback(model.data, hide);
+		};
+
+	});
+
+</script>

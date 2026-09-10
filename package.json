@@ -1,0 +1,53 @@
+{
+  "name": "techno4-threads",
+  "version": "2.0.0",
+  "description": "Techno4 Framework 2 Visual Workflow & Threads Studio",
+  "main": "index.js",
+  "bin": {
+    "techno4-threads": "./index.js",
+    "t4-threads": "./index.js"
+  },
+  "dependencies": {
+    "techno4-total": "^2.0.0"
+  },
+  "files": [
+    "--bundles--",
+    "--components--",
+    "--extensions--",
+    "actions",
+    "controllers",
+    "definitions",
+    "modules",
+    "plugins",
+    "public",
+    "views",
+    "index.js",
+    "extensions.js",
+    "config",
+    "LICENSE",
+    "readme.md",
+    "version"
+  ],
+  "scripts": {
+    "start": "node index.js 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CO-CF-TECHNO4/techno4-threads.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CO-CF-TECHNO4/techno4-threads/issues"
+  },
+  "keywords": [
+    "techno4",
+    "techno4-threads",
+    "threads",
+    "flow",
+    "flowstream",
+    "workflow",
+    "iot"
+  ],
+  "author": "CO «CF TECHNO4» <office@techno4.online>",
+  "license": "LGPL-3.0-or-later",
+  "homepage": "https://techno4.online"
+}

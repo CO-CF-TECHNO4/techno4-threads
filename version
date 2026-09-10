@@ -1,0 +1,19 @@
+11.1
+
+===================================
+Version: 11.1
+===================================
+
+- fixed `proxytimeout` option in the FlowStream settings
+- fixed `notes` synchronization
+- improved UI
+
+===================================
+Version: 11
+===================================
+
+- updated editor
+- added support for extensions
+- added support for actions
+- better plugin integration
+- added Tangular helper: `time`
