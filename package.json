@@ -1,7 +1,7 @@
 {
   "name": "techno4-threads",
   "version": "2.0.0",
-  "description": "Techno4 Framework 2 Visual Workflow & Threads Studio",
+  "description": "TECHNO4 FRAMEWORK2 Visual Workflow & Threads Studio",
   "main": "index.js",
   "bin": {
     "techno4-threads": "./index.js",
