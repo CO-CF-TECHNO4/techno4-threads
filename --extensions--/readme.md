@@ -1,5 +1,5 @@
-# Flow extensions
+# Threads extensions
 
 - copy `test.html` file to the `/extensions/` folder
 
-This extension extends FlowStream editor.
+This extension extends ThreadsStream editor.

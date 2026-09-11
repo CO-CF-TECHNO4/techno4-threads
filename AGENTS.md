@@ -1,31 +1,31 @@
 # AGENTS.md
 
-Guidance for AI coding agents working on Total.js Flow.
+Guidance for AI coding agents working on TECHNO4 Threads Studio (Total.js Threads).
 
 ## Project
 
-Total.js Flow v11 is a FlowStream-based visual automation and IoT application built on Total.js v5.
+TECHNO4 Threads Studio (Total.js Threads v11) is a ThreadsStream-based visual automation and IoT application built on Total.js v5.
 
-Package name: `flow`
+Package name: `techno4-threads`
 Main entry: `index.js`
-Runtime dependency: `total5`
-Default port: `8000`
-License: MIT
+Runtime dependency: `techno4-total`
+Default port: `8000` / `8008`
+License: LGPL-3.0-or-later
 
 ## Repository Layout
 
 - `index.js` starts Total.js v5 and calls `F.run(options)`.
-- `config` contains application configuration, API prefix, cookies, proxy timeout, and FlowStream settings.
-- `definitions/` contains app bootstrap, authentication, and FlowStream initialization.
+- `config` contains application configuration, API prefix, cookies, proxy timeout, and ThreadsStream settings.
+- `definitions/` contains app bootstrap, authentication, and ThreadsStream initialization.
 - `controllers/` contains HTTP, WebSocket, login, designer, update, private file, and notify routes.
-- `actions/` contains Total.js v5 actions for Flow API features such as streams, settings, auth, console, CDN, and variables.
+- `actions/` contains Total.js v5 actions for Threads API features such as streams, settings, auth, console, CDN, and variables.
 - `modules/` contains integration modules such as CDN and OpenPlatform.
 - `views/`, `public/`, `public/forms/`, and `public/parts/` contain the web UI.
-- `--components--/` contains FlowStream web component definitions.
+- `--components--/` contains ThreadsStream web component definitions.
 - `--extensions--/` contains editor extensions; extension files are copied to `/extensions/`.
-- `plugins/` contains built-in Flow plugins.
+- `plugins/` contains built-in Threads plugins.
 - `--bundles--/` contains generated/bundled app and plugin bundles used by Docker or bundled deployment.
-- `flowstream/` may be created at runtime to store FlowStream data when no custom `CONF.directory` is configured.
+- `flowstream/` may be created at runtime to store ThreadsStream data when no custom `CONF.directory` is configured.
 
 ## Commands
 
@@ -92,20 +92,20 @@ There is no test script in `package.json`; do not claim that `npm test` validate
 - Keep authentication behavior aligned with `definitions/auth.js`.
 - Keep startup/bootstrap behavior aligned with `definitions/init.js` and `definitions/flowstream.js`.
 
-## FlowStream Rules
+## ThreadsStream Rules
 
-- `Flow.db` stores FlowStream definitions and `Flow.instances` stores loaded instances.
-- Runtime FlowStream data is saved to `database.json` under `CONF.directory` or `PATH.root('flowstream')`.
+- `Flow.db` stores ThreadsStream definitions and `Flow.instances` stores loaded instances.
+- Runtime ThreadsStream data is saved to `database.json` under `CONF.directory` or `PATH.root('flowstream')`.
 - `definitions/flowstream.js` removes runtime-only properties such as `unixsocket`, `env`, `import`, `importscript`, `worker`, and `asfiles` when saving.
 - New or updated streams should continue to use `extensions.js` as the import file unless the task explicitly changes this behavior.
 - Be careful with `proxypath`: reserved paths include `/`, `/cdn/`, `/fapi/`, `/private/`, `/flows/`, `/designer/`, `/parts/`, `/forms/`, `/css/`, `/js/`, `/fonts/`, and `/panels/`.
-- Do not treat runtime FlowStream database files as normal source unless the task is explicitly about data migration or defaults.
+- Do not treat runtime ThreadsStream database files as normal source unless the task is explicitly about data migration or defaults.
 
 ## UI and Components
 
 - Preserve the existing jComponent/Total.js UI approach; do not replace the frontend stack.
 - UI components are loaded through `COMPONENTATOR()` in `definitions/init.js`.
-- FlowStream web components live in `--components--/`.
+- ThreadsStream web components live in `--components--/`.
 - Forms and page parts live under `public/forms/` and `public/parts/`.
 - Editor extensions belong in `--extensions--/` and are copied to `/extensions/` for use.
 
