@@ -1,6 +1,6 @@
 {
   "name": "techno4-threads",
-  "version": "2.0.0",
+  "version": "2.0.4",
   "description": "TECHNO4 FRAMEWORK2 Visual Workflow & Threads Studio",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
     "t4-threads": "./index.js"
   },
   "dependencies": {
-    "techno4-total": "^2.0.0"
+    "techno4-total": "^2.0.4"
   },
   "files": [
     "--bundles--",
