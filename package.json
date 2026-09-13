@@ -8,6 +8,7 @@
     "t4-threads": "./index.js"
   },
   "dependencies": {
+    "mongodb": "^4.0.0",
     "techno4-total": "^2.0.4"
   },
   "files": [
